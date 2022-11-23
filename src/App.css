@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  justify-content: center;
+  text-align: center;
+}
+
+body{
+  background: radial-gradient(closest-corner, #375f58,#fdfddd);
+  font-family: FreeMono, monospace;
+}
+
+.App {
+  display:inline-table;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+h1 {
+  font-style: italic;
+  text-shadow: 2px 3px 15px #f5f5f5;
+  margin-bottom: 7px;
+  border-bottom: outset #89a2ac;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  border: 8px;
+  letter-spacing: 0.05em;
+  line-height: 45px;
+}
+
+img {
+  width: 400px;
+  height: 300px;
+  margin: 15px;
+  border-radius: 15px;
+  border: 2px solid #677d85;
+  transition: 1s;
+}
+
+img:hover {
+  transform: scale(1.2)
+}
+
+select {
+  margin: 9px;
+  width: auto;
+  padding: 8px;
+  border: 3px solid #949394;
+  border-radius: 4px;
+  background-color: #949394;
+  transition: all 0.2s ease-out;
+}
+
+select:hover {
+  border-top: 3px solid #b82bca;
+  border-bottom: 3px solid #7a1fe2;
+  border-left: 3px solid #5ce426;
+  border-right: 3px solid #1a42f1;
+}
+
+select:focus {
+  border-top: 3px solid #b82bca;
+  border-bottom: 3px solid #7a1fe2;
+  border-left: 3px solid #5ce426;
+  border-right: 3px solid #199dd1;
+}
+
+option {
+  background-color: #cdcbcf;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+input {
+  margin: 5px;
+  padding:10px;
+  border-radius:10px;
+  background-color: #cdcbcf;
+}
+
+input[type=text]:focus {
+  border: 3px solid rgb(233, 7, 214);
+}
+
+.name {
+  width: auto;
+  height: auto;
+  background: linear-gradient(to top left, #a17aa1, #e081ec);
+  padding-bottom: 10px;
+  border-radius:0 0 10px 10px;
+  height: 50px;
+  width: 480px;
+  z-index: 1;
+  position:fixed;
+  font-family: 'Lobster', cursive;
+  font-size: 36px;
+  color: #725b6c;
+}
+
+.admin {
+  width: auto;
+  height: auto;
+  background: linear-gradient(to top left, #a17aa1, #e081ec);
+  padding-bottom: 10px;
+  border-radius:0 0 10px 10px;
+  height: 50px;
+  width: 480px;
+  /* font-family: 'Lobster', cursive; */
+  font-weight: 1000;
+  font-size: 18px;
+  color: #643959;
+  text-shadow: 2px 3px 15px #441544;
+  border-bottom: outset #89a2ac;
+}
+
+.listrooms {
+  display:block;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.blockroom {
+  height: auto;
+  border: 5px outset #a889ac;
+  border-radius: 15px;
+  margin: 5px;
+  width: auto;
+  padding: 15px;
+  background: radial-gradient(closest-corner, #cfcfcf,#9c8ba1);
+}
+
+.blockroom:hover {
+  background: radial-gradient(closest-corner, #cfcfcf,#647452);
+}
+
+.blockroomadm {
+  height: auto;
+  border: 5px outset #394e3f;
+  background-color: #596648;
+  color: aliceblue;
+  border-radius: 15px;
+  margin: 5px;
+  width: auto;
+  padding: 15px;
+}
+
+.modal {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modalcontent {
+  padding: 20px;
+  border-radius: 12px;
+  transform: scale(0.5);
+  transition: 0.4s all;
+  background-color: #c3cfca;
+}
+
+.modalcontent.active {
+  transform: scale(1);
+}
+
+.button {
+  /* сброс стилей */
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  /* сброс браузерных стилей для фокуса */
+  outline: none;
+  /* переопределение стилей для ссылок */
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  /* небольшие вертикальные отступы */
+  margin: 4px 12px 4px 12px;
+  /* невидимая рамка */
+  border: solid 1px transparent;
+  border-radius: 4px;
+  /* для установки размеров используем паддинги */
+  padding: 0.5em 1em;
+  /* контрастные цвета */
+  color: #e4e2e2;
+  background-color: #6d8186;
+}
+
+
+.button:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+.button:hover,
+.button:focus {
+  color: #9555af;
+  border-color: currentColor;
+  background-color: #cfcfcf;
+  text-shadow: 0px 3px 3px #775171;
+}
+
+.booked {
+  width: auto;
+  margin-left: 18px;
+  margin-right: 18px;
+  border: solid 1px #375f58;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  z-index: 1;
+  font-weight: 150;
+  background: linear-gradient(to top left, #8bb6b0, #6ea0b4);
+  line-height: 20px;
+  padding-bottom: 8px;
+}
+.booked > button {
+  margin: 7px 4px 7px 4px;
+  border: solid 1px transparent;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  color: #e4e2e2;
+  background-color: #6d8186;
+}
+
+.booked > button:hover {
+  color: #9555af;
+  border-color: currentColor;
+  background-color: #cfcfcf;
+  text-shadow: 0px 3px 3px #775171;
+}
+
+.blockbooked {
+  margin-top: 4px;
+  border-top: 10px;
+  border-radius:10px 10px 0 0;
+  width: 480px;
+  height: 300px;
+  background: linear-gradient( #877dbc,transparent);
+  z-index: -1;
+  position:absolute;
+}
+
+.listbooked p:first-child {
+  margin-top: 45px;
+}
+
+.nobooked {
+  display: none;
+}
+
