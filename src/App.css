@@ -187,27 +187,20 @@ input[type=text]:focus {
 }
 
 .button {
-  /* сброс стилей */
   padding: 0;
   border: none;
   font: inherit;
   color: inherit;
   background-color: transparent;
   cursor: pointer;
-  /* сброс браузерных стилей для фокуса */
   outline: none;
-  /* переопределение стилей для ссылок */
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  /* небольшие вертикальные отступы */
   margin: 4px 12px 4px 12px;
-  /* невидимая рамка */
   border: solid 1px transparent;
   border-radius: 4px;
-  /* для установки размеров используем паддинги */
   padding: 0.5em 1em;
-  /* контрастные цвета */
   color: #e4e2e2;
   background-color: #6d8186;
 }
